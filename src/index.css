@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Print styling helpers */
+  @media print {
+    body {
+      background-color: white !important;
+      color: black !important;
+    }
+    .no-print {
+      display: none !important;
+    }
+    .print-document {
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      color: black !important;
+      background: white !important;
+    }
+    /* Expand print layouts to fit standard A4 paper */
+    @page {
+      size: A4;
+      margin: 1.5cm;
+    }
+  }
+}
+
